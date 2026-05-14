@@ -1,0 +1,12 @@
+Adore-*.zip
+adore-design/
+*.pdf
+*Screenshot*.png
+excalidraw.log
+V2_POLISH_PROMPT.md
+V3_PANORAMA_PROMPT.md
+YLEE_WEBSITE_BRIEF.md
+.git/
+.vscode/
+.idea/
+.DS_Store
