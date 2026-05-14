@@ -2117,6 +2117,12 @@
     gap: 14px;
     border-bottom: 1px dashed var(--soft);
     padding-bottom: 8px;
+    transition: border-bottom-color .25s ease, border-bottom-style .25s ease;
+  }
+  /* show visitors which line they're writing on — invisible until they tap in */
+  .form .field:focus-within {
+    border-bottom-color: var(--sienna);
+    border-bottom-style: solid;
   }
   .form .field label {
     font-family: var(--serif); font-style: italic; opacity: .8;
@@ -2360,7 +2366,14 @@
   @media (max-width: 720px) {
     body { cursor: auto; }
     .pen, .ink-dot { display: none; }
-    .top-left { display: none; }
+    /* keep the skip nav — it's the only nav on mobile (floorplan is hidden < 1280px) */
+    .top-left { top: 14px; left: 14px; }
+    .skip {
+      opacity: 1; transform: none;          /* no hover on touch; show it permanently */
+      font-size: 13px; padding: 6px 11px;
+    }
+    .skip a { margin-right: 7px; }
+    .skip a:last-child { margin-right: 0; }
     .section { padding: 12vh 6vw; }
     .lived { display: none; }
   }
